@@ -17,7 +17,7 @@
 /* 行为相关颜色 */
 $uni-color-primary: rgba(187,222,214,1);
 $uni-color-success: rgba(255,182,185,1);
-$uni-color-warning: #f0ad4e;
+$uni-color-warning: rgba(255,182,185,1);
 $uni-color-error: #dd524d;
 
 /* 文字基本颜色 */
@@ -39,7 +39,7 @@ $uni-border-color:rgba(187,222,214,1);
 /* 尺寸变量 */
 
 /* 文字尺寸 */
-$uni-font-size-sm:24px;
+$uni-font-size-sm:24rpx;
 $uni-font-size-base:28px;
 $uni-font-size-lg:32;
 

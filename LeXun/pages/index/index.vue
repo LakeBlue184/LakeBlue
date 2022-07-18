@@ -24,25 +24,29 @@
 			
 		</view>	
 			
-		<view class="apply"></view>	
-		
-		<view class="chats">
-			<view class="chats-list">
-						
-				<view class="chats-list-left">
-					<text class="tips">1</text>
-					<image src="../../static/images/img/head3.jpeg"></image>
-				</view>
-						
-				<view class="chats-list-right">
-					<view class="top">
-						<view class="name">飞翔的企鹅</view>
-						<view class="time">13:45</view>
-					</view>
-				</view>
-							
-				<view class="content">开会记得带文件</view>
+		<view class="main">
+			
+			<view class="apply">
 				
+			</view>
+			<view class="chats">
+				<view class="chats-list">
+							
+					<view class="chats-list-left">
+						<text class="tips">1</text>
+						<image src="../../static/images/img/head3.jpeg"></image>
+					</view>
+							
+					<view class="chats-list-right">
+						<view class="top">
+							<view class="name">飞翔的企鹅</view>
+							<view class="time">13:45</view>
+						</view>
+					</view>
+								
+					<view class="content">开会记得带文件</view>
+					
+				</view>
 			</view>
 		</view>
 		
@@ -83,12 +87,13 @@
 		background: $uni-bg-color;
 		border-bottom: 1px solid $uni-border-color;
 		box-sizing: border-box;
-		padding-left: $uni-spacing-col-base;
-		padding-right: $uni-spacing-col-base;
+		//padding-left: $uni-spacing-col-base;
+		//padding-right: $uni-spacing-col-base;
+		z-index: 1000;
 		
 		.top-bar-left{
-			
 			float: left;
+			padding-left: $uni-spacing-col-base;
 				
 			image{
 					
@@ -119,7 +124,7 @@
 		}
 		
 		.top-bar-right{
-			
+			padding-right: $uni-spacing-col-base;
 			float: right;
 						
 			.search{
@@ -148,4 +153,42 @@
 		}
 	}
 	
+	.main{
+		
+		padding: 88rpx $uni-spacing-col-base 0;
+		
+	}
+	
+	.chats-list{
+		height: 96rpx;
+		padding: 16rpx 0;
+		
+		.chats-list-left{
+			position: relative;
+			float: left;
+			image{
+				
+				width: 96rpx;
+				height: 96rpx;
+				border-radius: $uni-border-radius-base;
+				
+			}
+			.tips{
+				
+				position: absolute;
+				top: -6rpx;
+				left: 68rpx;
+				min-width: 36rpx;
+				height: 36rpx;
+				line-height: 36rpx;
+				text-align: center;
+				font-size: $uni-font-size-sm;
+				color: $uni-text-color-inverse;
+				background: $uni-color-warning;
+				border-radius: $uni-border-radius-circle;
+				z-index: 1001;
+				
+			}
+		}		
+	}
 </style>
