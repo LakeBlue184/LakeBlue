@@ -26,9 +26,27 @@
 			
 		<view class="main">
 			
-			<view class="apply">
-				
+			<view class="chats">
+				<view class="chats-list">
+							
+					<view class="chats-list-left">
+						<text class="tips">1</text>
+						<image src="../../static/images/index/FriendsApply.png"></image>
+					</view>
+							
+					<view class="chats-list-right">
+						<view class="top">
+							<view class="name">好友申请</view>
+							<view class="time">13:27</view>
+						</view>
+						
+						<view class="content">BUG毁灭者请求添加您的好友</view>
+						
+					</view>
+								
+				</view>
 			</view>
+			
 			<view class="chats">
 				<view class="chats-list">
 							
@@ -40,11 +58,12 @@
 					<view class="chats-list-right">
 						<view class="top">
 							<view class="name">飞翔的企鹅</view>
-							<view class="time">13:45</view>
+							<view class="time">17:45</view>
 						</view>
+						
+						<view class="content">上次吃的那家火锅团购有优惠，下班要不要一起去给老板上一课！</view>
+						
 					</view>
-								
-					<view class="content">开会记得带文件</view>
 					
 				</view>
 			</view>
@@ -71,7 +90,7 @@
 
 <style lang="scss">
 	.content {
-		display: flex;
+		//display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
@@ -160,21 +179,24 @@
 	}
 	
 	.chats-list{
+		
 		height: 96rpx;
 		padding: 16rpx 0;
 		
 		.chats-list-left{
+			
 			position: relative;
 			float: left;
+			
 			image{
 				
 				width: 96rpx;
 				height: 96rpx;
 				border-radius: $uni-border-radius-base;
-				
+				background-color: $uni-bg-color;
 			}
 			.tips{
-				
+		
 				position: absolute;
 				top: -6rpx;
 				left: 68rpx;
@@ -189,6 +211,46 @@
 				z-index: 1001;
 				
 			}
-		}		
+		}	
+		.chats-list-right{
+			
+			padding-left: 128rpx;
+			
+			.top{
+				
+				height: 50rpx;
+				
+				.name{
+					
+					float: left;
+					font-size: 34rpx;
+					font-weight: 400;
+					color: $uni-text-color;
+					line-height: 50rpx;
+					
+				}
+				.time{
+					
+					float: right;
+					font-size: $uni-font-size-sm;
+					color: $uni-text-color-disable;
+					line-height: 50rpx;
+					
+				}
+				
+			}
+			
+		}
+		.content{
+			
+			font-size: $uni-font-size-base;
+			color: $uni-text-color-grey;
+			line-height: 40rpx;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+		}
 	}
 </style>
