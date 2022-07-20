@@ -97,16 +97,13 @@
 			getChats:function(){
 				
 				this.chats = datas.chats();
+				
 				for(let i=0; i<this.chats.length;i++){
 					
 					this.chats[i].imgurl = '../../static/images/img/' + this.chats[i].imgurl;
 					
-				}
-				
-				//console.log(this.chats);
-				
+				}							
 			}
-
 		}
 	}
 </script>
