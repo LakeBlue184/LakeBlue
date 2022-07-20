@@ -48,20 +48,20 @@
 			</view>
 			
 			<view class="chats">
-				<view class="chats-list">
+				<view class="chats-list" v-for="(item, index) in chats" :key="index">
 							
 					<view class="chats-list-left">
-						<text class="tips">1</text>
-						<image src="../../static/images/img/head3.jpeg"></image>
+						<text class="tips">{{item.tip}}</text>
+						<image :src="item.imgurl"></image>
 					</view>
 							
 					<view class="chats-list-right">
 						<view class="top">
-							<view class="name">飞翔的企鹅</view>
-							<view class="time">17:45</view>
+							<view class="name">{{item.name}}</view>
+							<view class="time">{{changeTime(item.time)}}</view>
 						</view>
 						
-						<view class="content">上次吃的那家火锅团购有优惠，下班要不要一起去给老板上一课！</view>
+						<view class="content">{{item.content}}</view>
 						
 					</view>
 					
@@ -73,16 +73,39 @@
 </template>
 
 <script>
+	import datas from '@/commons/js/datas.js';
+	import MyFunction from '@/commons/js/MyFunction.js';
 	export default {
 		data() {
 			return {
-				title: 'LeXun'
+				chats:[],
 			}
 		},
 		onLoad() {
+			
+			this.getChats();
 
 		},
 		methods: {
+			
+			changeTime:function(date){
+				
+				return MyFunction.dateTime(date);
+				
+			},
+			
+			getChats:function(){
+				
+				this.chats = datas.chats();
+				for(let i=0; i<this.chats.length;i++){
+					
+					this.chats[i].imgurl = '../../static/images/img/' + this.chats[i].imgurl;
+					
+				}
+				
+				//console.log(this.chats);
+				
+			}
 
 		}
 	}
