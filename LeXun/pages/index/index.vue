@@ -61,7 +61,7 @@
 							<view class="time">{{changeTime(item.time)}}</view>
 						</view>
 						
-						<view class="content">{{item.content}}</view>
+						<view id="content" class="u-line-1">{{item.content}}</view>
 						
 					</view>
 					
@@ -109,11 +109,19 @@
 </script>
 
 <style lang="scss">
-	.content {
+	#content {
 		//display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		font-size: $uni-font-size-base;
+		color: $uni-text-color-grey;
+		line-height: 40rpx;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
 	}
 	
 	.top-bar{
@@ -125,7 +133,8 @@
 		height: 88rpx;
 		background: $uni-bg-color;
 		border-bottom: 1px solid $uni-border-color;
-		box-sizing: border-box;
+		//box-sizing: border-box;
+		padding-top: var(--status-bar-height);
 		//padding-left: $uni-spacing-col-base;
 		//padding-right: $uni-spacing-col-base;
 		z-index: 1000;
@@ -194,14 +203,22 @@
 	
 	.main{
 		
-		padding: 88rpx $uni-spacing-col-base 0;
+		padding-top: 104rpx;
 		
 	}
 	
 	.chats-list{
 		
+		font-size: $uni-font-size-base;
+		color: $uni-text-color-grey;
 		height: 96rpx;
-		padding: 16rpx 0;
+		padding: 16rpx $uni-spacing-col-base;
+		
+		&:active{
+			
+			background-color: $uni-bg-color-hover;
+			
+		}
 		
 		.chats-list-left{
 			
@@ -228,7 +245,7 @@
 				color: $uni-text-color-inverse;
 				background: $uni-color-warning;
 				border-radius: $uni-border-radius-circle;
-				z-index: 1001;
+				z-index: 999;
 				
 			}
 		}	
@@ -260,17 +277,6 @@
 				
 			}
 			
-		}
-		.content{
-			
-			font-size: $uni-font-size-base;
-			color: $uni-text-color-grey;
-			line-height: 40rpx;
-			overflow: hidden;
-			text-overflow: ellipsis;
-			display: -webkit-box;
-			-webkit-line-clamp: 1;
-			-webkit-box-orient: vertical;
 		}
 	}
 </style>
