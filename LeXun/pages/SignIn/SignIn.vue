@@ -94,7 +94,11 @@
 			//登陆提交
 			Login: function(){
 				
-				
+				if(this.user && this.password){
+					
+					
+					
+				}
 				
 			}
 			
@@ -104,6 +108,8 @@
 </script>
 
 <style lang="scss">
+@import"../../commons/css/MyCSS.scss";
+	
 	.content{
 		
 		padding-top: var(--status-bar-height);

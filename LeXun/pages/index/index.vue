@@ -109,6 +109,7 @@
 </script>
 
 <style lang="scss">
+	@import"../../commons/css/MyCSS.scss";
 	#content {
 		//display: flex;
 		flex-direction: column;
@@ -131,7 +132,7 @@
 		left: 0;
 		width: 100%;
 		height: 88rpx;
-		background: $uni-bg-color;
+		background: rgba(138,198,209,0.96);
 		border-bottom: 1px solid $uni-border-color;
 		//box-sizing: border-box;
 		padding-top: var(--status-bar-height);
