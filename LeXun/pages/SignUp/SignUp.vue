@@ -41,7 +41,7 @@
 				
 				<view class="DivInputs">
 					
-					<input :type="type" placeholder="我已经捂好眼睛啦~输入新密码!" placeholder-style="color:#999; font-weight:400;" @input="GetPassword"/>
+					<input :type="type" placeholder="我捂好眼睛啦~请输入新密码!" placeholder-style="color:#999; font-weight:400;" @input="GetPassword"/>
 					<image :src="lookUrl" class="look" @tap="looks"></image>
 				</view>
 				
