@@ -109,7 +109,9 @@
 </script>
 
 <style lang="scss">
+	
 	@import"../../commons/css/MyCSS.scss";
+	
 	#content {
 		//display: flex;
 		flex-direction: column;
@@ -126,80 +128,10 @@
 	}
 	
 	.top-bar{
-		
-		position: fixed;
-		top:0;
-		left: 0;
-		width: 100%;
-		height: 88rpx;
+
 		background: rgba(138,198,209,0.96);
 		border-bottom: 1px solid $uni-border-color;
-		//box-sizing: border-box;
-		padding-top: var(--status-bar-height);
-		//padding-left: $uni-spacing-col-base;
-		//padding-right: $uni-spacing-col-base;
-		z-index: 1000;
 		
-		.top-bar-left{
-			float: left;
-			padding-left: $uni-spacing-col-base;
-				
-			image{
-					
-				width: 68rpx;
-				height: 68rpx;
-				border-radius: 16rpx;
-				margin-top: 10rpx;
-					
-			}
-		}
-		
-		.top-bar-center{
-			position: absolute;
-			text-align: center;
-			left: 0;
-			right: 0;
-			top:0;
-			bottom: 0;
-			margin: auto;
-			.Logo{
-				
-				width: 44rpx;
-				height: 44rpx;
-				padding-top: 19rpx;
-				
-			}
-			
-		}
-		
-		.top-bar-right{
-			padding-right: $uni-spacing-col-base;
-			float: right;
-						
-			.search{
-				
-				width: 85rpx;
-				height: 88rpx;
-				display: inline-block;
-				
-			}
-			.Add{
-				
-				width: 60rpx;
-				height: 88rpx;
-				display: inline-block;
-				
-			}
-			
-			image{
-				
-				width: 52rpx;
-				height: 52rpx;
-				padding: 18rpx 0 0 18rpx;
-				
-			}
-			
-		}
 	}
 	
 	.main{
