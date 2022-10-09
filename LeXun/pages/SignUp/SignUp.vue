@@ -166,47 +166,14 @@
 </script>
 
 <style lang="scss">
+@import"../../commons/css/MyCSS.scss";
+
 	.content{
 		
 		padding-top: var(--status-bar-height);
 		
 	}
 	
-	.top-bar{
-		
-		position: fixed;
-		top:0;
-		left: 0;
-		width: 100%;
-		height: 88rpx;
-		background: $uni-bg-color;
-		//border-bottom: 1px solid $uni-border-color;
-		padding-top: var(--status-bar-height);
-		z-index: 1000;
-				
-		.top-bar-left{
-			
-			width: 88rpx;
-			height: 88rpx;
-			padding-left: 32rpx;
-			float: left;
-			
-		}
-		.cancel{
-			
-			font-size: $uni-font-size-lg;
-			font-weight: 500;
-			color: #fff7f7;
-			line-height: 88rpx;
-		}
-		.back{
-			
-			margin-top: 21rpx;
-			width: 30rpx;
-			height: 44rpx;
-			
-		}
-	}
 	.logo {
 		text-align: center;
 		image{
@@ -218,17 +185,11 @@
 		}
 	
 	}
+	
 	.main{
 		
 		padding: 54rpx $uni-spacing-row-lg 120rpx;
-		.title{
-			
-			font-size: 56rpx;
-			font-weight: 500;
-			color: $uni-text-color;
-			line-height: 80rpx;
-			
-		}
+
 		.slogan{
 			
 			font-size: 40rpx;
@@ -236,9 +197,11 @@
 			color: $uni-text-color-grey;
 			
 		}
+		
 		.inputs{
 			
 			padding-top: 8rpx;
+			
 			input{
 				
 				padding-top: 48rpx;
@@ -249,40 +212,41 @@
 				line-height: 88rpx;
 				border-bottom: 1px solid $uni-border-color;
 			}
-		.DivInputs{
+			
+			.DivInputs{
+					
+				position: relative;
+					
+			}
+			.occupy,.null{
 				
-			position: relative;
+				position: absolute;
+				right: 0;
+				top:40rpx;
+				font-size: $uni-font-size-base;
+				font-weight: 500;
+				color: $uni-color-warning;
+				line-height: 88rpx;
 				
-		}
-		.occupy,.null{
-			
-			position: absolute;
-			right: 0;
-			top:40rpx;
-			font-size: $uni-font-size-base;
-			font-weight: 500;
-			color: $uni-color-warning;
-			line-height: 88rpx;
-			
-		}
-		.itsOK{
-			
-			position: absolute;
-			right: 0;
-			top:76rpx;
-			width: 42rpx;
-			height: 32rpx;
-			
-		}
-		.look{
-			
-			position: absolute;
-			right: 0;
-			top:76rpx;
-			width: 42rpx;
-			height: 32rpx;
-			
-		}
+			}
+			.itsOK{
+				
+				position: absolute;
+				right: 0;
+				top:76rpx;
+				width: 42rpx;
+				height: 32rpx;
+				
+			}
+			.look{
+				
+				position: absolute;
+				right: 0;
+				top:76rpx;
+				width: 42rpx;
+				height: 32rpx;
+				
+			}
 			
 		}		
 	}

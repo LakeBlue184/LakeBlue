@@ -4,7 +4,7 @@
 				
 			<view class="top-bar-right" @tap="ToSignUp()">
 					
-				<view class="cancel">注册</view>
+				<view class="button">注册</view>
 						
 			</view>
 				
@@ -116,32 +116,6 @@
 		
 	}
 	
-	.top-bar{
-		
-		position: fixed;
-		top:0;
-		left: 0;
-		width: 100%;
-		height: 88rpx;
-		background: $uni-bg-color;
-		//border-bottom: 1px solid $uni-border-color;
-		padding-top: var(--status-bar-height);
-		z-index: 1000;
-				
-		.top-bar-right{
-			
-			padding-right: 32rpx;
-			float: right;
-			
-		}
-		.cancel{
-			
-			font-size: $uni-font-size-lg;
-			font-weight: 500;
-			color: #fff7f7;
-			line-height: 88rpx;
-		}
-	}
 	.logo {
 		text-align: center;
 		image{
@@ -156,14 +130,7 @@
 	.main{
 		
 		padding: 54rpx $uni-spacing-row-lg 120rpx;
-		.title{
-			
-			font-size: 56rpx;
-			font-weight: 500;
-			color: $uni-text-color;
-			line-height: 80rpx;
-			
-		}
+
 		.slogan{
 			
 			font-size: 40rpx;
