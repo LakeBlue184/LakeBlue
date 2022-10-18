@@ -168,13 +168,6 @@
 <style lang="scss">
 	
 	@import"../../commons/css/MyCSS.scss";
-
-	.top-bar{
-		
-		background: $uni-color-primary;
-		border-bottom: 1px solid $uni-border-color;
-		
-	}
 	
 	.logo {
 		text-align: center;

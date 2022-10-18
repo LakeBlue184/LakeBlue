@@ -51,7 +51,7 @@
 				<view class="chats-list" v-for="(item, index) in chats" :key="index">
 							
 					<view class="chats-list-left">
-						<text class="tips">{{item.tip}}</text>
+						<text class="tips" v-if="item.tip > 0">{{item.tip}}</text>
 						<image :src="item.imgurl"></image>
 					</view>
 							
@@ -112,25 +112,9 @@
 	
 	@import"../../commons/css/MyCSS.scss";
 	
-	#content {
-		//display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		font-size: $uni-font-size-base;
-		color: $uni-text-color-grey;
-		line-height: 40rpx;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		display: -webkit-box;
-		-webkit-line-clamp: 1;
-		-webkit-box-orient: vertical;
-	}
-	
 	.top-bar{
 
 		background: rgba(138,198,209,0.96);
-		border-bottom: 1px solid $uni-border-color;
 		
 	}
 	
@@ -168,16 +152,17 @@
 			.tips{
 		
 				position: absolute;
-				top: -6rpx;
+				top: -8rpx;
 				left: 68rpx;
-				min-width: 36rpx;
+				min-width: 20rpx;
 				height: 36rpx;
 				line-height: 36rpx;
 				text-align: center;
+				padding: 0 8rpx;
 				font-size: $uni-font-size-sm;
 				color: $uni-text-color-inverse;
 				background: $uni-color-warning;
-				border-radius: $uni-border-radius-circle;
+				border-radius: 18rpx;
 				z-index: 999;
 				
 			}
