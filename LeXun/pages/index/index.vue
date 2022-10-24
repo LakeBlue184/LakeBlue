@@ -118,6 +118,18 @@
 		
 	}
 	
+	.top-bar-right{
+		
+		.search{
+			
+			width: 85rpx;
+			height: 88rpx;
+			display: inline-block;
+			
+		}
+		
+	}
+	
 	.main{
 		
 		padding-top: 104rpx;
