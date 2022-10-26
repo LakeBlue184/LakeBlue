@@ -111,6 +111,15 @@
 <style lang="scss">
 	@import"../../commons/css/MyCSS.scss";
 	
+<<<<<<< HEAD
+=======
+	.content{
+		
+		padding-top: var(--status-bar-height);
+		
+	}
+	
+>>>>>>> f66760011de7879abf553eed943496e13695732c
 	.logo {
 		text-align: center;
 		image{
