@@ -115,7 +115,6 @@
 	.top-bar{
 
 		background: rgba(138,198,209,0.96);
-<<<<<<< HEAD
 		
 	}
 	
@@ -129,10 +128,8 @@
 			
 		}
 		
-=======
 		border-bottom: 1px solid $uni-border-color;
 		
->>>>>>> f66760011de7879abf553eed943496e13695732c
 	}
 	
 	.main{

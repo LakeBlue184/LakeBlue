@@ -166,11 +166,7 @@
 </script>
 
 <style lang="scss">
-<<<<<<< HEAD
 	
-	@import"../../commons/css/MyCSS.scss";
-	
-=======
 @import"../../commons/css/MyCSS.scss";
 
 	.content{
@@ -179,7 +175,6 @@
 		
 	}
 	
->>>>>>> f66760011de7879abf553eed943496e13695732c
 	.logo {
 		text-align: center;
 		image{
