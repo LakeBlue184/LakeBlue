@@ -18,6 +18,21 @@
 			
 		</view>	
 		
+		<view class="main">
+			
+			<view class="search-user result">
+				
+				<view class="title">用户</view>
+				<view class="list user">
+					
+					<image src=""></image>
+					
+				</view>
+				
+			</view>
+			
+		</view>
+		
 	</view>
 </template>
 
