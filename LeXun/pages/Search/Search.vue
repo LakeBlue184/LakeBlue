@@ -23,11 +23,67 @@
 			<view class="search-user result">
 				
 				<view class="title">用户</view>
+				
 				<view class="list user">
 					
-					<image src=""></image>
+					<image src="../../static/images/img/head1.jpeg"></image>
+					
+					<view class="names">
+						
+						<view class="name">玩仔码头</view>
+						<view class="email">Playerstation@163.com</view>
+						
+					</view>
+					
+					<view class="Right-button">发送</view>
 					
 				</view>
+				
+				<view class="list user">
+					
+					<image src="../../static/images/img/head2.jpeg"></image>
+					
+					<view class="names">
+						
+						<view class="name">日敲一码</view>
+						<view class="email">YiMa@163.com</view>
+						
+					</view>
+					
+					<view class="Right-button">发送</view>
+					
+				</view>
+				
+				<view class="list user">
+					
+					<image src="../../static/images/img/head2.jpeg"></image>
+					
+					<view class="names">
+						
+						<view class="name">日敲一码</view>
+						<view class="email">YiMa@163.com</view>
+						
+					</view>
+					
+					<view class="Right-button">发送</view>
+					
+				</view>
+				
+				<view class="list user">
+					
+					<image src="../../static/images/img/head2.jpeg"></image>
+					
+					<view class="names">
+						
+						<view class="name">日敲一码</view>
+						<view class="email">YiMa@163.com</view>
+						
+					</view>
+					
+					<view class="Right-button">发送</view>
+					
+				</view>
+				
 				
 			</view>
 			
@@ -81,6 +137,79 @@
 			width: 35rpx;
 			height: 35rpx;
 			top: 26rpx;
+			
+		}
+		
+	}
+	
+	.main{
+		
+		padding:88rpx $uni-spacing-col-base;
+		
+		.result{
+			
+			.title{
+				
+				font-size: 44rpx;
+				font-weight: 600;
+				color: $uni-text-color-grey;
+				line-height: 60rpx;
+				
+			}
+			.list{
+				
+				width: 100%;
+				height: 80rpx;
+				padding: 20rpx 0;
+				
+				image{
+					
+					float: left;
+					width: 80rpx;
+					height: 80rpx;
+					border-radius: $uni-border-radius-base;
+					
+				}
+				
+			}
+			
+			.names{
+				
+				float: left;
+				padding-left: $uni-spacing-col-base;				
+			}
+			
+			.email{
+				
+				font-size: $uni-font-size-sm;
+				color: $uni-text-color-grey;
+				line-height: 28rpx;
+				
+			}
+			
+			.name{
+				
+				font-size: 36rpx;
+				font-weight: 400;
+				color: $uni-text-color-grey;
+				line-height: 50rpx;
+				
+			}
+			
+			.Right-button{
+				
+				float: right;
+				width: 120rpx;
+				height: 48rpx;
+				color: #fff7f7;
+				line-height: 48rpx;
+				text-align: center;
+				margin-top: 16rpx;
+				font-size: $uni-font-size-sm;
+				background-color: $uni-color-primary;
+				border-radius: 24rpx;
+				
+			}
 			
 		}
 		
