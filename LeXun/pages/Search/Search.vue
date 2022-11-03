@@ -35,7 +35,7 @@
 						
 					</view>
 					
-					<view class="Right-button">发送</view>
+					<view class="Right-button add">加好友</view>
 					
 				</view>
 				
@@ -49,44 +49,13 @@
 						<view class="email">YiMa@163.com</view>
 						
 					</view>
-					
-					<view class="Right-button">发送</view>
-					
-				</view>
-				
-				<view class="list user">
-					
-					<image src="../../static/images/img/head2.jpeg"></image>
-					
-					<view class="names">
-						
-						<view class="name">日敲一码</view>
-						<view class="email">YiMa@163.com</view>
-						
-					</view>
-					
-					<view class="Right-button">发送</view>
+					 
+					<view class="Right-button send">发消息</view>
 					
 				</view>
 				
-				<view class="list user">
-					
-					<image src="../../static/images/img/head2.jpeg"></image>
-					
-					<view class="names">
-						
-						<view class="name">日敲一码</view>
-						<view class="email">YiMa@163.com</view>
-						
-					</view>
-					
-					<view class="Right-button">发送</view>
-					
-				</view>
-				
-				
-			</view>
-			
+			</view>	
+							
 		</view>
 		
 	</view>
@@ -201,13 +170,25 @@
 				float: right;
 				width: 120rpx;
 				height: 48rpx;
-				color: #fff7f7;
 				line-height: 48rpx;
 				text-align: center;
 				margin-top: 16rpx;
 				font-size: $uni-font-size-sm;
-				background-color: $uni-color-primary;
 				border-radius: 24rpx;
+				
+			}
+			
+			.send{
+				
+				background-color: $uni-color-primary;
+				color: #fff7f7;
+				
+			}
+			
+			.add{
+				
+				background-color: $uni-color-primary;
+				color: #fff7f7;
 				
 			}
 			
