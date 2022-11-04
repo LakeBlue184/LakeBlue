@@ -62,11 +62,46 @@
 </template>
 
 <script>
+	
+	import datas from '../../commons/js/datas.js';
+	
 	export default {
 		data() {
 			return {
 				
-			};
+				userArr:[],
+				
+			}
+		},
+		
+		methods:{
+			
+			search: function(e){
+				
+				this.userArr = [];
+				let searchValue = e.detail.value;
+				this.searchUser(e);
+				
+			},
+			
+			searchUser: function(e){
+				
+				let arr = datas.Friends();
+				
+				for(let i = 0; i<arr.length; i++){
+					
+					if(arr[i].name.search(e) != -1 || arr[i].email.search(e) != -1 ){
+						
+						this.userArr.push(arr[i]);
+						
+					}
+					
+				}
+				
+				console.log(this.userArr);
+				
+			}
+			
 		}
 	}
 </script>

@@ -51,7 +51,7 @@ export default{
 			},
 			{
 				
-				id:1,
+				id:5,
 				imgurl:'head4.jpeg',
 				tip:1,
 				name:'寻尹153',
@@ -62,7 +62,7 @@ export default{
 			
 			{
 				
-				id:2,
+				id:6,
 				imgurl:'head2.jpeg',
 				tip:0,
 				name:'猫猫岁岁',
@@ -74,7 +74,7 @@ export default{
 					
 			{
 				
-				id:3,
+				id:7,
 				imgurl:'head5.jpeg',
 				tip:17,
 				name:'薇薇不秃头',
@@ -86,7 +86,7 @@ export default{
 			
 			{
 				
-				id:4,
+				id:8,
 				imgurl:'head6.jpeg',
 				tip:5,
 				name:'后端刘德华',
@@ -97,7 +97,7 @@ export default{
 			},
 			{
 				
-				id:1,
+				id:9,
 				imgurl:'head4.jpeg',
 				tip:1,
 				name:'寻尹153',
@@ -108,7 +108,7 @@ export default{
 			
 			{
 				
-				id:2,
+				id:10,
 				imgurl:'head2.jpeg',
 				tip:0,
 				name:'猫猫岁岁',
@@ -120,7 +120,7 @@ export default{
 					
 			{
 				
-				id:3,
+				id:11,
 				imgurl:'head5.jpeg',
 				tip:17,
 				name:'薇薇不秃头',
@@ -132,7 +132,7 @@ export default{
 			
 			{
 				
-				id:4,
+				id:12,
 				imgurl:'head6.jpeg',
 				tip:5,
 				name:'后端刘德华',
@@ -146,6 +146,45 @@ export default{
 		
 		return ChatsGroup;
 		
+	},
+	
+	//好友数据表
+	isFriend: function(){
+		
+		let Friends = [
+			
+			{
+			
+				userID:1,
+				friendID:2,
+			
+			},
+			
+			{
+				
+				userID:1,
+				friendID:5,
+				
+			},
+			
+			{
+			
+				userID:1,
+				friendID:6,
+			
+			},
+			
+			{
+				
+				userID:1,
+				friendID:8,
+				
+			},
+			
+		
+		]
+		
 	}
+	
 	
 }
