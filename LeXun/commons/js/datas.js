@@ -149,7 +149,7 @@ export default{
 	},
 	
 	//好友数据表
-	isFriend: function(){
+	isFriends: function(){
 		
 		let Friends = [
 			

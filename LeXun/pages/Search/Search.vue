@@ -81,12 +81,12 @@
 				this.userArr = [];
 				let searchValue = e.detail.value;
 				this.searchUser(e);
-				
+					
 			},
 			
 			searchUser: function(e){
 				
-				let arr = datas.Friends();
+				let arr = datas.chats();
 				
 				for(let i = 0; i<arr.length; i++){
 					
@@ -100,7 +100,7 @@
 				
 				console.log(this.userArr);
 				
-			}
+			},
 			
 		}
 	}
