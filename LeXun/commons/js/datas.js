@@ -11,6 +11,7 @@ export default{
 				name:'寻尹153',
 				time: new Date(),
 				content:'东西我搞好了，你看看不',
+				email:'123@qq.com',
 				
 			},
 			
@@ -22,7 +23,7 @@ export default{
 				name:'猫猫岁岁',
 				time: new Date(),
 				content:'UTF-8 编码具有更广泛的适应性。BOM 在使用程序或工具处理文件时可能造成不必要的干扰。',
-				
+				email:'123@qq.com',
 				
 			},	
 					
@@ -34,7 +35,7 @@ export default{
 				name:'薇薇不秃头',
 				time: new Date(),
 				content:'在GitHub搜开源电子书时发现了一个宝藏仓库，收录了全网最全的免费开源电子书资源！',
-				
+				email:'123@qq.com',
 				
 			},
 			
@@ -46,7 +47,7 @@ export default{
 				name:'后端刘德华',
 				time: new Date(),
 				content:'车队缺人，速来上分~',
-				
+				email:'123@qq.com',
 				
 			},
 			{
@@ -57,6 +58,7 @@ export default{
 				name:'寻尹153',
 				time: new Date(),
 				content:'东西我搞好了，你看看不',
+				email:'123@qq.com',
 				
 			},
 			
@@ -68,7 +70,7 @@ export default{
 				name:'猫猫岁岁',
 				time: new Date(),
 				content:'UTF-8 编码具有更广泛的适应性。BOM 在使用程序或工具处理文件时可能造成不必要的干扰。',
-				
+				email:'123@qq.com',
 				
 			},	
 					
@@ -80,7 +82,7 @@ export default{
 				name:'薇薇不秃头',
 				time: new Date(),
 				content:'在GitHub搜开源电子书时发现了一个宝藏仓库，收录了全网最全的免费开源电子书资源！',
-				
+				email:'123@qq.com',
 				
 			},
 			
@@ -92,7 +94,7 @@ export default{
 				name:'后端刘德华',
 				time: new Date(),
 				content:'车队缺人，速来上分~',
-				
+				email:'123@qq.com',
 				
 			},
 			{
@@ -103,6 +105,7 @@ export default{
 				name:'寻尹153',
 				time: new Date(),
 				content:'东西我搞好了，你看看不',
+				email:'123@qq.com',
 				
 			},
 			
@@ -114,7 +117,7 @@ export default{
 				name:'猫猫岁岁',
 				time: new Date(),
 				content:'UTF-8 编码具有更广泛的适应性。BOM 在使用程序或工具处理文件时可能造成不必要的干扰。',
-				
+				email:'123@qq.com',
 				
 			},	
 					
@@ -126,7 +129,7 @@ export default{
 				name:'薇薇不秃头',
 				time: new Date(),
 				content:'在GitHub搜开源电子书时发现了一个宝藏仓库，收录了全网最全的免费开源电子书资源！',
-				
+				email:'123@qq.com',
 				
 			},
 			
@@ -138,7 +141,7 @@ export default{
 				name:'后端刘德华',
 				time: new Date(),
 				content:'车队缺人，速来上分~',
-				
+				email:'123@qq.com',
 				
 			},
 			
