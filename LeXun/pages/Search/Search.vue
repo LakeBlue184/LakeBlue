@@ -80,7 +80,7 @@
 				
 				this.userArr = [];
 				let searchValue = e.detail.value;
-				this.searchUser(e);
+				this.searchUser(searchValue);
 					
 			},
 			
@@ -222,7 +222,7 @@
 			
 			.add{
 				
-				background-color: $uni-color-primary;
+				background-color: rgb(207, 170, 158);
 				color: #fff7f7;
 				
 			}
