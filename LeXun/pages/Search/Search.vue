@@ -24,14 +24,14 @@
 				
 				<view class="title">用户</view>
 				
-				<view class="list user">
+				<view class="list user" v-for="(item,index) in userArr" :key="index">
 					
-					<image src="../../static/images/img/head1.jpeg"></image>
+					<image :src="item.imgurl"></image>
 					
 					<view class="names">
 						
-						<view class="name">玩仔码头</view>
-						<view class="email">Playerstation@163.com</view>
+						<view class="name">{{item.name}}</view>
+						<view class="email">{{item.email}}</view>
 						
 					</view>
 					
@@ -39,7 +39,7 @@
 					
 				</view>
 				
-				<view class="list user">
+<!-- 				<view class="list user">
 					
 					<image src="../../static/images/img/head2.jpeg"></image>
 					
@@ -52,7 +52,7 @@
 					 
 					<view class="Right-button send">发消息</view>
 					
-				</view>
+				</view> -->
 				
 			</view>	
 							
@@ -80,18 +80,26 @@
 				
 				this.userArr = [];
 				let searchValue = e.detail.value;
-				this.searchUser(searchValue);
+				if(searchValue.length > 0){
+					
+					this.searchUser(searchValue);
+					
+				}
 					
 			},
 			
 			searchUser: function(e){
 				
 				let arr = datas.chats();
+				let exp = eval("/"+e+"g");
 				
 				for(let i = 0; i<arr.length; i++){
 					
 					if(arr[i].name.search(e) != -1 || arr[i].email.search(e) != -1 ){
 						
+						arr[i].imgurl = '../../static/images/img/' + arr[i].imgurl;
+						arr[i].name.replace(exp,<span style='color: #fff7f7;'>"+e+"</span>)
+						arr[i].email.replace(exp,<span style='color: #fff7f7;'>"+e+"</span>)
 						this.userArr.push(arr[i]);
 						
 					}
