@@ -185,7 +185,9 @@ export default{
 			},
 			
 		
-		]
+		];
+		
+		return Friends;
 		
 	}
 	

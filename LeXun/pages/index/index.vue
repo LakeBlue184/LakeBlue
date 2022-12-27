@@ -12,7 +12,7 @@
 			
 			<view class="top-bar-right">
 				
-				<view class="search">
+				<view class="search" @tap="TrunSearch">
 					<image src="../../static/images/index/search.png"></image>
 				</view>
 				
@@ -103,6 +103,16 @@
 					this.chats[i].imgurl = '../../static/images/img/' + this.chats[i].imgurl;
 					
 				}							
+			},
+			
+			TrunSearch:function(){
+				
+				uni.navigateTo({
+					
+					url:'../Search/Search',
+					
+				})
+				
 			}
 		}
 	}

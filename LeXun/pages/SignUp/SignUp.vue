@@ -2,7 +2,7 @@
 	<view class="content">
 		<view class="top-bar">
 				
-			<view class="top-bar-left" @tap="ToSignIn()">
+			<view class="top-bar-left" @tap="BackWeb">
 					
 				<image src="../../static/images/common/back.png" class="back"></image>
 						
@@ -153,7 +153,7 @@
 			},
 			
 			//返回登陆界面
-			ToSignIn: function(){
+			BackWeb: function(){
 				
 				uni.navigateBack({
 					delta: 1

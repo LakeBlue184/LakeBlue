@@ -40,7 +40,7 @@ export default{
 			
 		}
 		
-		//转换前天时间
+		//转换昨天时间
 		if(D+1 === ND && Month === NMonth && year === NYear){
 			
 			if(hour < 10){

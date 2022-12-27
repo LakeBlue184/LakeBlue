@@ -12,7 +12,7 @@
 			
 			<view class="top-bar-right">
 				
-				<view class="button">取消</view>
+				<view class="button" @tap="BackWeb">取消</view>
 					
 			</view>
 			
@@ -22,7 +22,7 @@
 			
 			<view class="search-user result">
 				
-				<view class="title">用户</view>
+				<view class="title" v-if="userArr.length > 0">用户</view>
 				
 				<view class="list user" v-for="(item,index) in userArr" :key="index">
 					
@@ -30,12 +30,13 @@
 					
 					<view class="names">
 						
-						<view class="name">{{item.name}}</view>
-						<view class="email">{{item.email}}</view>
+						<view class="name" v-html="item.name"></view>
+						<view class="email" v-html="item.email"></view>
 						
 					</view>
 					
-					<view class="Right-button add">加好友</view>
+					<view class="Right-button add" v-if="item.tip == 1">发消息</view>
+					<view class="Right-button send" v-if="item.tip == 0">加好友</view>
 					
 				</view>
 				
@@ -50,7 +51,7 @@
 						
 					</view>
 					 
-					<view class="Right-button send">发消息</view>
+					<view class="Right-button send">加好友</view>
 					
 				</view> -->
 				
@@ -88,27 +89,56 @@
 					
 			},
 			
+			//关键词匹配用户
 			searchUser: function(e){
 				
 				let arr = datas.chats();
-				let exp = eval("/"+e+"g");
+				let exp = eval("/"+e+"/g");
 				
 				for(let i = 0; i<arr.length; i++){
 					
 					if(arr[i].name.search(e) != -1 || arr[i].email.search(e) != -1 ){
 						
+						this.isFriend(arr[i]);
 						arr[i].imgurl = '../../static/images/img/' + arr[i].imgurl;
-						arr[i].name.replace(exp,<span style='color: #fff7f7;'>"+e+"</span>)
-						arr[i].email.replace(exp,<span style='color: #fff7f7;'>"+e+"</span>)
+						arr[i].name=arr[i].name.replace(exp,"<span style='color: #f199bc;'>"+e+"</span>");
+						arr[i].email=arr[i].email.replace(exp,"<span style='color: #f199bc;'>"+e+"</span>");
 						this.userArr.push(arr[i]);
 						
 					}
 					
 				}
+								
+			},
+			
+			//判断是否为好友
+			isFriend: function(e){
 				
-				console.log(this.userArr);
+				let tip = 0;
+				let arr = datas.isFriends();
+				for(let i = 0;i < arr.length;i++){
+					
+					if(arr[i].friendID == e.id){
+						
+						tip = 1;
+						
+					}
+					
+				}
+				
+				e.tip = tip;
+				//console.log(e.tip);
 				
 			},
+			
+			//返回首页
+			BackWeb: function(){
+				
+				uni.navigateBack({
+					delta: 1
+				});
+				
+			}
 			
 		}
 	}
