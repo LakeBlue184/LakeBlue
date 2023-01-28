@@ -11,13 +11,23 @@
 			
 			<view class="top-bar-right">
 				
-				<view class="button" @tap="BackWeb">取
-				
-				消</view>
+				<view class="more-img" @tap="BackWeb">
+					
+					<image src="../../static/images/UserHome/more.png"></image>
+					
+				</view>
 					
 			</view>
 			
 		</view>	
+		
+		<view class="bg">
+			
+			<view class="bg-white"></view>
+			
+			<image src="../../static/images/img/head3.jpeg" class="bg-img" mode="aspectFill"></image>
+			
+		</view>
 		
 	</view>
 </template>
@@ -47,5 +57,26 @@
 <style lang="scss">
 
 	@import"../../commons/css/MyCSS.scss";
+	
+	.bg{
+		
+		position: fixed;
+		top:0;
+		left:0;
+		width: 100%;
+		height: 100%;
+		
+		.bg-img{
+			
+			position:absolute;
+			left:-10rpx;
+			top:-10rpx;
+			width: 110%;
+			height: 110%;
+			filter: blur(16px);
+			
+		}
+		
+	}
 
 </style>
