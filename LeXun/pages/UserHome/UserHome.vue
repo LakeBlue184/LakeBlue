@@ -29,6 +29,22 @@
 			
 		</view>
 		
+		<view class="main">
+			
+			<view>
+				
+				<image src="../../static/images/UserHome/female.png"></image>
+				
+			</view>
+			
+			<view class="UserHead">
+				
+				<image src="../../static/images/img/head3.jpeg" mode="aspectFill"></image>
+				
+			</view>
+			
+		</view>
+		
 	</view>
 </template>
 
@@ -60,14 +76,25 @@
 	
 	.bg{
 		
+		z-index: -2;
 		position: fixed;
 		top:0;
 		left:0;
 		width: 100%;
 		height: 100%;
 		
+		.bg-white{
+			
+			width: 100%;
+			height: 100%;
+			//background-color: #eee;
+			
+		}
+		
 		.bg-img{
 			
+			z-index: -1;
+			opacity:0.5;
 			position:absolute;
 			left:-10rpx;
 			top:-10rpx;
