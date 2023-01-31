@@ -31,7 +31,7 @@
 		
 		<view class="main">
 			
-			<view>
+			<view class="sex">
 				
 				<image src="../../static/images/UserHome/female.png"></image>
 				
@@ -39,7 +39,7 @@
 			
 			<view class="UserHead">
 				
-				<image src="../../static/images/img/head3.jpeg" mode="aspectFill"></image>
+				<image src="../../static/images/img/head3.jpeg" mode="aspectFill" class="UserHead-img"></image>
 				
 			</view>
 			
@@ -101,6 +101,32 @@
 			width: 110%;
 			height: 110%;
 			filter: blur(16px);
+			
+		}
+		
+	}
+	
+	.main{
+		
+		.UserHead{
+			
+			padding-top: 148rpx;
+			
+			.sex{
+				
+				
+				
+			}
+			
+			.UserHead-img{
+				
+				position: relative;				
+				width: 400rpx;
+				height: 400rpx;
+				border-radius: 48rpx;
+				border: 6rpx solid rgba(225, 225, 225, 1);
+				
+			}
 			
 		}
 		
