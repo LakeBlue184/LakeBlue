@@ -112,6 +112,7 @@
 			
 			padding-top: 148rpx;
 			
+
 			.sex{
 				
 				
@@ -121,6 +122,9 @@
 			.UserHead-img{
 				
 				position: relative;				
+
+			.UserHead-img{
+				
 				width: 400rpx;
 				height: 400rpx;
 				border-radius: 48rpx;
