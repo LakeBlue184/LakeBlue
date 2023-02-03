@@ -110,19 +110,17 @@
 		
 		.UserHead{
 			
-			padding-top: 148rpx;
-			
+			position: relative;
+			//padding-top: 50rpx;
 
 			.sex{
 				
-				
+				position: absolute;
+				bottom: 12rpx;
+				right: 12rpx;
 				
 			}
 			
-			.UserHead-img{
-				
-				position: relative;				
-
 			.UserHead-img{
 				
 				width: 400rpx;
