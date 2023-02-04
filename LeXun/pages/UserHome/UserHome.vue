@@ -31,17 +31,31 @@
 		
 		<view class="main">
 			
-			<view class="sex">
-				
-				<image src="../../static/images/UserHome/female.png"></image>
-				
-			</view>
-			
 			<view class="UserHead">
+				
+				<view class="sex" :style="{background:SexBg}">
+					
+					<image src="../../static/images/UserHome/female.png"></image>
+					
+				</view>
 				
 				<image src="../../static/images/img/head3.jpeg" mode="aspectFill" class="UserHead-img"></image>
 				
 			</view>
+			
+			<view class="User-intro">
+				
+				<view class="name">{{user.name}}</view>
+				<view class="nick">昵称：{{user.nick}}</view>
+				<view class="intro">{{user.intro}}</view>
+				
+			</view>
+			
+		</view>
+		
+		<view class="Bottom-bar">
+			
+			<view class="Bottom-btn">加为好友</view>
 			
 		</view>
 		
@@ -52,6 +66,15 @@
 	export default {
 		data() {
 			return {
+				
+				SexBg:'rgba(215,245,241,1)',
+				
+				user:{
+					
+					name:'开发-李小K',
+					nick:'一截春风炒香菇',
+					intro:'5年前端开发工程师，专注前后端交互设计~混迹于CSDN的90后单身小女子兼自媒体运营一枚呀~自媒体商务合作请联系QQ：123456，XV：ABCD1234',
+				},
 				
 			};
 		},
@@ -108,17 +131,34 @@
 	
 	.main{
 		
+		text-align: center;
+		
+		padding-top: 148rpx;
+		
 		.UserHead{
 			
 			position: relative;
-			//padding-top: 50rpx;
-
+			margin: 0 auto;
+			width: 412rpx;
+			height: 412rpx;
+			
 			.sex{
 				
 				position: absolute;
-				bottom: 12rpx;
-				right: 12rpx;
+				bottom: 22rpx;
+				right: 22rpx;
+				z-index: 1;
+				width: 64rpx;
+				height: 64rpx;
+				border-radius: $uni-border-radius-circle;
 				
+				image{
+					
+					padding:16rpx;
+					width: 32rpx;
+					height: 32rpx;
+					
+				}
 			}
 			
 			.UserHead-img{
@@ -129,6 +169,67 @@
 				border: 6rpx solid rgba(225, 225, 225, 1);
 				
 			}
+			
+		}
+		
+		.User-intro{
+			
+			padding: 20rpx 100rpx;
+			font-family: "PingFangSC-Light";
+			color: #6E7783;
+			
+			.name{
+				
+				font-size: 52rpx;
+				line-height: 74rpx;
+				
+			}
+			
+			.nick{
+				
+				font-size:$uni-font-size-base;
+				line-height: 40rpx;
+				
+			}
+			
+			.intro{
+				
+				padding-top: 20rpx;
+				width: 552rpx;
+				height: 170rpx;
+				font-size:$uni-font-size-base;
+				font-weight: 300;
+				line-height: 48rpx;
+				
+			}
+			
+		}
+		
+	}
+	
+	.Bottom-bar{
+		
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		height: 120rpx;
+		
+		.Bottom-btn{
+			
+			position: absolute;
+			left: 0;
+			right: 0;
+			top:0;
+			bottom: 0;
+			margin: auto;
+			text-align: center;
+			line-height: 80rpx;
+			width: 684rpx;
+			height: 80rpx;
+			font-size:$uni-font-size-lg;
+			color: $uni-text-color-inverse;
+			background-color: $uni-color-primary;
+			border-radius:$uni-border-radius-sm;
 			
 		}
 		
