@@ -59,6 +59,14 @@
 			
 		</view>
 		
+		<view class="Add-Misg">
+			
+			<view class="name">{{user.name}}</view>
+			
+			<textarea :value="MyName+'请求加为好友'" maxlength="120" class="Add-Main"></textarea>
+			
+		</view>
+		
 	</view>
 </template>
 
@@ -68,6 +76,8 @@
 			return {
 				
 				SexBg:'rgba(215,245,241,1)',
+				
+				MyName:'一截春风炒香菇',
 				
 				user:{
 					
