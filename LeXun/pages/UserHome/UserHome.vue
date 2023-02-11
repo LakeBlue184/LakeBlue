@@ -157,7 +157,7 @@
 				position: absolute;
 				bottom: 22rpx;
 				right: 22rpx;
-				z-index: 1;
+				z-index: 11;
 				width: 64rpx;
 				height: 64rpx;
 				border-radius: $uni-border-radius-circle;
@@ -173,6 +173,7 @@
 			
 			.UserHead-img{
 				
+				z-index: 10;
 				width: 400rpx;
 				height: 400rpx;
 				border-radius: 48rpx;
@@ -243,6 +244,41 @@
 			
 		}
 		
+	}
+	
+	.Add-Misg{
+		
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0 56rpx;
+		height: 1252rpx;
+		background: #FFFF;
+		border-radius: 40px 40px 0px 0px;
+		
+		.name{
+			
+			padding-top: 168rpx;
+			font-size: 52rpx;
+			color: $uni-text-color;
+			line-height: 74rpx;
+			
+		}
+		
+		.Add-Main{
+			
+			padding:18rpx 22rpx;
+			width: 100%;
+			height: 720rpx;
+			background: #F3F4F6;
+			border-radius: $uni-border-radius-base;
+			font-size: $uni-font-size-lg;
+			color: $uni-text-color;
+			line-height: 44rpx;
+			
+			
+		}
 	}
 
 </style>
