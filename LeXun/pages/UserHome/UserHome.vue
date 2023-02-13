@@ -269,8 +269,8 @@
 		.Add-Main{
 			
 			padding:18rpx 22rpx;
-			width: 100%;
-			height: 720rpx;
+			//width: 100%;
+			height: 620rpx;
 			background: #F3F4F6;
 			border-radius: $uni-border-radius-base;
 			font-size: $uni-font-size-lg;
