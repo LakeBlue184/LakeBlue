@@ -67,6 +67,13 @@
 			
 		</view>
 		
+		<view class="Add-btn">
+			
+			<view class="close">取消</view>
+			<view class="send">发送</view>
+			
+		</view>
+		
 	</view>
 </template>
 
@@ -223,16 +230,12 @@
 		position: fixed;
 		bottom: 0;
 		width: 100%;
-		height: 120rpx;
+		height: 104rpx;
+		box-sizing: border-box;
+		padding:12rpx $uni-spacing-col-base;
 		
 		.Bottom-btn{
 			
-			position: absolute;
-			left: 0;
-			right: 0;
-			top:0;
-			bottom: 0;
-			margin: auto;
 			text-align: center;
 			line-height: 80rpx;
 			width: 684rpx;
@@ -270,7 +273,7 @@
 			
 			padding:18rpx 22rpx;
 			//width: 100%;
-			height: 620rpx;
+			height: 420rpx;
 			background: #F3F4F6;
 			border-radius: $uni-border-radius-base;
 			font-size: $uni-font-size-lg;
@@ -279,6 +282,46 @@
 			
 			
 		}
+	}
+	
+	.Add-btn{
+		
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		height: 104rpx;
+		box-sizing: border-box;
+		padding:12rpx $uni-spacing-col-base;
+		display: flex;
+		z-index: 100;
+		
+		.close{
+			
+			text-align: center;
+			line-height: 80rpx;
+			width: 172rpx;
+			height: 80rpx;
+			font-size:$uni-font-size-lg;
+			color: $uni-text-color-inverse;
+			background-color: $uni-color-primary;
+			border-radius:$uni-border-radius-sm;
+
+		}
+		
+		.send{
+			
+			flex: auto;
+			text-align: center;
+			line-height: 80rpx;
+			height: 80rpx;
+			margin-left:$uni-spacing-col-base;
+			font-size:$uni-font-size-lg;
+			color: $uni-text-color-inverse;
+			background-color: $uni-color-primary;
+			border-radius:$uni-border-radius-sm;
+			
+		}
+		
 	}
 
 </style>
