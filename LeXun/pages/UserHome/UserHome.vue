@@ -59,7 +59,7 @@
 			
 		</view>
 		
-		<view class="Add-Misg">
+		<view class="Add-Misg" :style="{height:addHeight+'px',bottom:-+addHeight+'px'}">
 			
 			<view class="name">{{user.name}}</view>
 			
@@ -287,7 +287,7 @@
 	.Add-btn{
 		
 		position: fixed;
-		bottom: 0;
+		//bottom: -104rpx;
 		width: 100%;
 		height: 104rpx;
 		box-sizing: border-box;
@@ -299,7 +299,7 @@
 			
 			text-align: center;
 			line-height: 80rpx;
-			width: 172rpx;
+			width: 172+rpx;
 			height: 80rpx;
 			font-size:$uni-font-size-lg;
 			color: $uni-text-color-inverse;
