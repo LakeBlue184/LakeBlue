@@ -23,7 +23,7 @@
 		
 		<view class="bg">
 			
-			<view class="bg-white"></view>
+			<view class="bg-white" :animation="animationData4"></view>
 			
 			<image src="../../static/images/img/head3.jpeg" class="bg-img" mode="aspectFill"></image>
 			
@@ -84,6 +84,16 @@
 				
 				addHeight:'',
 				
+				headMove:'',
+				
+				headPosition:'',
+				
+				headBottom:'',
+								
+				headWidth:'',
+				
+				headHeight:'',
+				
 				animationData:{},
 				
 				animationData1:{},
@@ -91,6 +101,8 @@
 				animationData2:{},
 				
 				animationData3:{},
+				
+				animationData4:{},
 				
 				isAdd:false,
 								
@@ -108,9 +120,13 @@
 			};
 		},
 		
+		//获取界面尺寸
 		onReady: function(){
 		
 			this.getElementStyle();
+			this.getheadMove();
+			this.getheadSize();
+			this.getheadPodition();
 			
 		},
 		
@@ -125,62 +141,111 @@
 				
 			},
 			
+			//获取界面高度，以便输入框自适应高度
 			getElementStyle: function(){
 				
 				const query = uni.createSelectorQuery().in(this);
 				query.select('.bg').boundingClientRect(data => {
-				  console.log("得到布局位置信息" + JSON.stringify(data));
-				  console.log("节点离页面顶部的距离为" + data.top);
+				  JSON.stringify(data);
+				  data.top;
 				  this.addHeight = data.height-186;
 				}).exec();
-				
+								
 			},
-			//添加好友动画
-			AddFriendAnimat:function(){
+			
+			//
+			getheadMove: function(){
+				
+				const query = uni.createSelectorQuery().in(this);
+				query.select('.Add-Misg').boundingClientRect(data => {
+				  JSON.stringify(data);
+				  data.height;
+				  this.headMove = data.height;
+				}).exec();
+								
+			},
+			
+			getheadSize: function(){
+				
+				const query = uni.createSelectorQuery().in(this);
+				query.select('.UserHead-img').boundingClientRect(data => {
+				  JSON.stringify(data);
+				  data.width;
+				  data.height;
+				  this.headWidth = data.width;
+				  this.headHeight = data.height;
+				}).exec();
+								
+			},
+			
+			getheadPodition: function(){
+				
+				const query = uni.createSelectorQuery().in(this);
+				query.select('.UserHead').boundingClientRect(data => {
+				  JSON.stringify(data);
+				  data.position;
+				  data.bottom;
+				  this.headPosition = data.position;
+				  this.headBottom = data.bottom;
+				}).exec();
+								
+			},
+			
+			AddFriendAnimat:function(){//申请好友界面动画设置
 				
 				this.isAdd = !this.isAdd;
 				
-				var animation = uni.createAnimation({//好友申请框
+				var animation = uni.createAnimation({//好友申请框动画持续时间
 					
 					duration: 750,
 					timingFunction: 'ease',
 					
 				})
 				
-				var animation1 = uni.createAnimation({//界面底部按钮
+				var animation1 = uni.createAnimation({//界面底部按钮动画持续时间
 					
 					duration: 750,
 					timingFunction: 'ease',
 					
 				})
 				
-				var animation2 = uni.createAnimation({//头像缩放
+				var animation2 = uni.createAnimation({//用户头像缩放动画持续时间
 					
 					duration: 750,
 					timingFunction: 'ease',
 					
 				})
 				
-				var animation3 = uni.createAnimation({//
+				var animation3 = uni.createAnimation({//性别图标动画持续时间
 					
 					duration: 750,
 					timingFunction: 'ease',
 					
 				})
+				
+				var animation4 = uni.createAnimation({//性别图标动画持续时间
+					
+					duration: 750,
+					timingFunction: 'ease',
+					
+				})
+				
 				
 				if(this.isAdd){
 					
-					animation.bottom(0).step()
-					animation1.bottom(0).step()
-					animation2.width(120).height(120).top(40).step()
-					animation3.opacity(0).step()
+					animation.bottom(0).step()//输入框弹出
+					animation1.bottom(0).step()//底部按钮弹出
+					animation2.width(120).height(120).top(this.headMove-(this.headMove-50)).step()//头像缩小
+					animation3.opacity(0).step()//性别图标渐隐
+					animation4.backgroundColor('rgba(138,198,209,0.6)').step()
 					
 				}else{
 					
-					animation.bottom(-this.addHeight).step()
-					animation1.bottom(-100).step()
-					animation2.width(200).height(200).top(0).step()
-					animation3.opacity(1).step()
+					animation.bottom(-this.addHeight).step()//输入框回缩
+					animation1.bottom(-100).step()//底部按钮回缩
+					animation2.width(this.headWidth-6).height(this.headHeight-6).bottom(this.headBottom - this.headBottom).top(this.headPosition).step()//头像放大
+					animation3.opacity(1).step()//性别图标渐显
+					animation4.backgroundColor('rgba(138,198,209,0)').step()
 					
 				}
 
@@ -188,6 +253,7 @@
 				this.animationData1 = animation1.export()
 				this.animationData2 = animation2.export()
 				this.animationData3 = animation3.export()
+				this.animationData4 = animation4.export()
 				
 			}
 			
@@ -342,11 +408,9 @@
 	.Add-Misg{
 		
 		position: fixed;
-		//bottom: 0;
 		width: 100%;
 		box-sizing: border-box;
 		padding: 0 56rpx;
-		//height: 1252rpx;
 		background: #FFFF;
 		border-radius: 40px 40px 0px 0px;
 		

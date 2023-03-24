@@ -1,9 +1,12 @@
 <template>
 	<view class="content">
+		
 		<view class="top-bar">
 			
 			<view class="top-bar-left">
-				<image src="../../static/images/img/head1.jpeg"></image>
+				
+				<image src="../../static/images/img/head1.jpeg" class="MyHead" @tap="TrunUserWeb"></image>
+				
 			</view>
 			
 			<view class="top-bar-center">
@@ -113,7 +116,18 @@
 					
 				})
 				
+			},
+			
+			TrunUserWeb:function(){
+				
+				uni.navigateTo({
+					
+					url:'../UserHome/UserHome',
+					
+				})
+				
 			}
+			
 		}
 	}
 </script>
@@ -165,7 +179,7 @@
 			
 			position: relative;
 			float: left;
-			
+						
 			image{
 				
 				width: 96rpx;
@@ -187,7 +201,7 @@
 				color: $uni-text-color-inverse;
 				background: $uni-color-warning;
 				border-radius: 18rpx;
-				z-index: 999;
+				z-index: 1;
 				
 			}
 		}	

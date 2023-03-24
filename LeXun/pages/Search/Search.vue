@@ -26,7 +26,11 @@
 				
 				<view class="list user" v-for="(item,index) in userArr" :key="index">
 					
-					<image :src="item.imgurl"></image>
+					<navigator url="../UserHome/UserHome?id=aaa">
+					
+						<image :src="item.imgurl"></image>
+						
+					</navigator>
 					
 					<view class="names">
 						
