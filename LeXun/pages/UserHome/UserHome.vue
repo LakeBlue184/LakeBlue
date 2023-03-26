@@ -264,7 +264,7 @@
 
 <style lang="scss">
 
-	@import"../../commons/css/MyCSS.scss";
+	@import "../../commons/css/MyCSS.scss";
 	
 	.bg{
 		
