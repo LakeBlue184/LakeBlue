@@ -55,7 +55,7 @@
 		
 		<view class="Bottom-bar">
 			
-			<view class="Bottom-btn" @tap="AddFriendAnimat">加为好友</view>
+			<view class="Bottom-btn btn1" @tap="AddFriendAnimat">加为好友</view>
 			
 		</view>
 		
@@ -70,6 +70,7 @@
 		<view class="Add-btn" :animation="animationData1">
 			
 			<view class="cancel" @tap="AddFriendAnimat">取消</view>
+			
 			<view class="send">发送</view>
 			
 		</view>
@@ -77,8 +78,12 @@
 	</view>
 </template>
 
-<script>	
+<script>
+
+	//import ComBotButton from '@/commons/css/ComBotButton.vue';
+
 	export default {
+				
 		data() {
 			return {
 				
@@ -136,8 +141,12 @@
 			BackWeb: function(){
 				
 				uni.navigateBack({
-					delta: 1
+					
+					delta: 1,
+					
 				});
+				
+			
 				
 			},
 			
@@ -235,7 +244,7 @@
 					
 					animation.bottom(0).step()//输入框弹出
 					animation1.bottom(0).step()//底部按钮弹出
-					animation2.width(120).height(120).top(this.headMove-(this.headMove-50)).step()//头像缩小
+					animation2.width(120).height(120).top(this.headMove-(this.headMove-90)).step()//头像缩小
 					animation3.opacity(0).step()//性别图标渐隐
 					animation4.backgroundColor('rgba(138,198,209,0.6)').step()
 					
@@ -260,6 +269,7 @@
 		},
 				
 	}
+	
 </script>
 
 <style lang="scss">
@@ -316,7 +326,7 @@
 			.sex{
 				
 				position: absolute;
-				bottom: 20rpx;
+				bottom: -50rpx;
 				right: 22rpx;
 				z-index: 11;
 				width: 64rpx;
@@ -334,8 +344,8 @@
 			
 			.UserHead-img{
 				
-				z-index: 10;
-				top:0;
+				z-index: 3;
+				top:70rpx;
 				width: 400rpx;
 				height: 400rpx;
 				border-radius: 48rpx;
@@ -370,7 +380,7 @@
 				
 				padding-top: 20rpx;
 				width: 552rpx;
-				height: 170rpx;
+				height: 170rpx;  
 				font-size:$uni-font-size-base;
 				font-weight: 300;
 				line-height: 48rpx;
@@ -381,7 +391,7 @@
 		
 	}
 	
-	.Bottom-bar{
+	/*.Bottom-bar{
 		
 		position: fixed;
 		bottom: 0;
@@ -400,6 +410,17 @@
 			color: $uni-text-color-inverse;
 			background-color: $uni-color-primary;
 			border-radius:$uni-border-radius-sm;
+			
+		}
+		
+	}*/
+	
+	.Bottom-bar{
+		
+		.Bottom-btn{
+			
+			background-color: $uni-color-primary;
+			margin: 0 $uni-spacing-col-base;
 			
 		}
 		
