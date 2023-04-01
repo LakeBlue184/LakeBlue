@@ -176,7 +176,9 @@
 	}
 	
 	.logo {
+		
 		text-align: center;
+		
 		image{
 			
 			padding-top: 256rpx;

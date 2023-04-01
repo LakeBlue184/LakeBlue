@@ -67,11 +67,11 @@
 			
 		</view>
 		
-		<view class="Add-btn" :animation="animationData1">
+		<view class="Add-btn Bottom-bar" :animation="animationData1">
 			
-			<view class="cancel" @tap="AddFriendAnimat">取消</view>
+			<view class="cancel btn1" @tap="AddFriendAnimat">取消</view>
 			
-			<view class="send">发送</view>
+			<view class="send btn1">发送</view>
 			
 		</view>
 		
@@ -79,8 +79,6 @@
 </template>
 
 <script>
-
-	//import ComBotButton from '@/commons/css/ComBotButton.vue';
 
 	export default {
 				
@@ -462,38 +460,38 @@
 	
 	.Add-btn{
 		
-		position: fixed;
 		bottom: -104rpx;
-		width: 100%;
-		height: 104rpx;
-		box-sizing: border-box;
-		padding:12rpx $uni-spacing-col-base;
+		//width: 100%;
+		//height: 104rpx;
+		//box-sizing: border-box;
+		//padding:12rpx $uni-spacing-col-base;
 		display: flex;
 		z-index: 100;
 		
 		.cancel{
 			
-			text-align: center;
-			line-height: 80rpx;
-			width: 172+rpx;
-			height: 80rpx;
-			font-size:$uni-font-size-lg;
-			color: $uni-text-color-inverse;
-			background-color: $uni-color-primary;
-			border-radius:$uni-border-radius-sm;
+			//text-align: center;
+			//line-height: 80rpx;
+			width: 172rpx;
+			//height: 80rpx;
+			//font-size:$uni-font-size-lg;
+			//color: $uni-text-color-inverse;
+			background: $uni-color-primary;
+			margin-left:$uni-spacing-col-base;
+			//border-radius:$uni-border-radius-sm;
 
 		}
 		
 		.send{
 			
 			flex: auto;
-			text-align: center;
-			line-height: 80rpx;
-			height: 80rpx;
-			margin-left:$uni-spacing-col-base;
-			font-size:$uni-font-size-lg;
-			color: $uni-text-color-inverse;
-			background-color: $uni-color-primary;
+			//text-align: center;
+			//line-height: 80rpx;
+			//height: 80rpx;
+			margin: 0 $uni-spacing-col-base;
+			//font-size:$uni-font-size-lg;
+			//color: $uni-text-color-inverse;
+			background: $uni-color-primary;
 			border-radius:$uni-border-radius-sm;
 			
 		}
