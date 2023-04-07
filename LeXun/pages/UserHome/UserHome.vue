@@ -123,7 +123,7 @@
 			};
 		},
 		
-		//获取界面尺寸
+		//获取界面尺寸预加载
 		onReady: function(){
 		
 			this.getElementStyle();
@@ -152,10 +152,13 @@
 			getElementStyle: function(){
 				
 				const query = uni.createSelectorQuery().in(this);
+				
 				query.select('.bg').boundingClientRect(data => {
+					
 				  JSON.stringify(data);
 				  data.top;
 				  this.addHeight = data.height-186;
+				  
 				}).exec();
 								
 			},
@@ -256,11 +259,11 @@
 					
 				}
 
-				this.animationData = animation.export()
-				this.animationData1 = animation1.export()
-				this.animationData2 = animation2.export()
-				this.animationData3 = animation3.export()
-				this.animationData4 = animation4.export()
+					this.animationData = animation.export()
+					this.animationData1 = animation1.export()
+					this.animationData2 = animation2.export()
+					this.animationData3 = animation3.export()
+					this.animationData4 = animation4.export()
 				
 			}
 			

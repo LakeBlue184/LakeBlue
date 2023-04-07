@@ -63,6 +63,46 @@ export default{
 			
 		}
 		
-	}
+	},
 	
+	//详细时间转换
+	dateTime(d){
+		
+		let OldTime = new Date(d);
+		
+		//获取OldTime的具体时间
+		let time = OldTime.getTime();
+		let hour = OldTime.getHours();
+		let minute = OldTime.getMinutes();
+		let year = OldTime.getFullYear();
+		let Month = OldTime.getMonth() + 1;
+		let D = OldTime.getDate();
+		
+		//处理时间
+		if(Month < 10){
+			
+			Month = '0' + Month;
+			
+		}
+		
+		if(D < 10){
+			
+			D = '0' + D;
+			
+		}
+		
+		if(hour < 10){
+			
+			hour = '0' + hour;
+			
+		}
+		
+		if(minute < 10){
+			
+			minute = '0' + minute;
+			
+		}
+		return year + '-' + Month + '-' + D +' '+ hour + ':' + minute;
+		
+	}	
 }
