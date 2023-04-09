@@ -76,6 +76,16 @@
             }
             
         }
+        ,{
+            "path" : "pages/FriendRequest/FriendRequest",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
