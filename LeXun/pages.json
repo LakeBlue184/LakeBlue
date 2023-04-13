@@ -86,6 +86,16 @@
             }
             
         }
+        ,{
+            "path" : "pages/Chatroom/Chatroom",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

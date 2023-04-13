@@ -140,6 +140,18 @@
 
 		background: rgba(138,198,209,0.96);
 		
+		.top-bar-right{
+			
+			image{
+				
+				width: 52rpx;
+				height: 52rpx;
+				padding: 18rpx 0 0 18rpx;
+				
+			}
+			
+		}
+		
 	}
 	
 	.top-bar-right{
